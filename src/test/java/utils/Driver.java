@@ -33,6 +33,7 @@ public class Driver {
 //        driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
+        
         Runtime.getRuntime().addShutdownHook(new Thread("Driver shutdown thread") {
             public void run() {
                 driver.quit();
